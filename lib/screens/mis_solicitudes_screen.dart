@@ -11,48 +11,64 @@ class MisSolicitudesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Solicitudes de Asesoría"),
-        backgroundColor: Colors.purple,
-        automaticallyImplyLeading: false,
-      ),
-      body: ListView.builder(
-        padding: EdgeInsets.all(16),
-        itemCount: solicitudes.length,
-        itemBuilder: (context, index) {
-          final solicitud = solicitudes[index];
-          return Card(
-            child: Padding(
-              padding: EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    solicitud['cliente']!,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                  ),
-                  SizedBox(height: 4),
-                  Text(solicitud['detalle']!),
-                  SizedBox(height: 8),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ChatDetailsScreen(clienteName: solicitud['cliente']!),
-                          ),
-                        );
-                      },
-                      child: Text("Ver Detalles"),
-                    ),
-                  ),
-                ],
+      body: Column(
+        children: [
+          Container(
+            padding: EdgeInsets.only(top: 40, bottom: 16),
+            alignment: Alignment.center,
+            child: Text(
+              "Solicitudes de Asesoría",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
               ),
             ),
-          );
-        },
+          ),
+          Expanded(
+            child: ListView.builder(
+              padding: EdgeInsets.all(16),
+              itemCount: solicitudes.length,
+              itemBuilder: (context, index) {
+                final solicitud = solicitudes[index];
+                return Card(
+                  child: Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          solicitud['cliente']!,
+                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                        ),
+                        SizedBox(height: 4),
+                        Text(solicitud['detalle']!),
+                        SizedBox(height: 8),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ChatDetailsScreen(clienteName: solicitud['cliente']!),
+                                ),
+                              );
+                            },
+                            child: Text("Ver Detalles"),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.purple,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }

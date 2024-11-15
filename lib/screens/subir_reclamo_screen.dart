@@ -1,88 +1,95 @@
 import 'package:flutter/material.dart';
-import 'package:file_picker/file_picker.dart';
 
-class SubirReclamoScreen extends StatefulWidget {
-  @override
-  _SubirReclamoScreenState createState() => _SubirReclamoScreenState();
-}
+class SubirReclamoScreen extends StatelessWidget {
+  final TextEditingController _tituloController = TextEditingController();
+  final TextEditingController _descripcionController = TextEditingController();
+  String _selectedCategoria = "Seleccionar";
 
-class _SubirReclamoScreenState extends State<SubirReclamoScreen> {
-  final TextEditingController tituloController = TextEditingController();
-  final TextEditingController descripcionController = TextEditingController();
-  String categoria = '';
-  List<String> documentos = [];
-
-  void handleSubmit() {
-    print('Reclamo enviado: ${tituloController.text}, ${descripcionController.text}, $categoria, $documentos');
-    // Lógica para procesar el reclamo
-  }
-
-  Future<void> selectDocuments() async {
-    FilePickerResult? result = await FilePicker.platform.pickFiles(allowMultiple: true);
-    if (result != null) {
-      setState(() {
-        documentos = result.paths.map((path) => path!).toList();
-      });
-    }
+  void _showReclamoEnviadoDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text("Reclamo enviado"),
+          content: Text("Su reclamo ha sido enviado con éxito."),
+          actions: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Cierra la ventana emergente
+              },
+              child: Text("Cerrar", style: TextStyle(color: Colors.white)),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
+            ),
+          ],
+        );
+      },
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //appBar: AppBar(
-      //  title: Text("Subir Reclamo"),
-      //  backgroundColor: Colors.grey[900],
-      //),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Text(
-              'Subir Reclamo',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-              textAlign: TextAlign.center,
+      body: Column(
+        children: [
+          Container(
+            padding: EdgeInsets.only(top: 40, bottom: 16),
+            alignment: Alignment.center,
+            child: Text(
+              "Subir Reclamo",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
             ),
-            SizedBox(height: 16),
-            TextField(
-              controller: tituloController,
-              decoration: InputDecoration(labelText: 'Título del Reclamo'),
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TextFormField(
+                    controller: _tituloController,
+                    decoration: InputDecoration(labelText: "Título del Reclamo"),
+                  ),
+                  SizedBox(height: 16),
+                  DropdownButtonFormField<String>(
+                    value: _selectedCategoria,
+                    items: ["Seleccionar", "Categoría 1", "Categoría 2", "Categoría 3"]
+                        .map((categoria) => DropdownMenuItem(
+                              value: categoria,
+                              child: Text(categoria),
+                            ))
+                        .toList(),
+                    onChanged: (value) {
+                      _selectedCategoria = value!;
+                    },
+                    decoration: InputDecoration(labelText: "Seleccione una categoría"),
+                  ),
+                  SizedBox(height: 16),
+                  TextFormField(
+                    controller: _descripcionController,
+                    decoration: InputDecoration(labelText: "Descripción del Reclamo"),
+                    maxLines: 4,
+                  ),
+                  SizedBox(height: 16),
+                  ElevatedButton(
+                    onPressed: () {
+                      // Lógica para enviar reclamo (puedes agregar más aquí si es necesario)
+                      _showReclamoEnviadoDialog(context); // Muestra la ventana emergente
+                    },
+                    child: Text("Enviar Reclamo", style: TextStyle(color: Colors.white),),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.purple,
+                      padding: EdgeInsets.symmetric(vertical: 12),
+                    ),
+                  ),
+                ],
+              ),
             ),
-            DropdownButton<String>(
-              value: categoria.isEmpty ? null : categoria,
-              hint: Text('Seleccione una categoría'),
-              items: ['Derecho Civil', 'Derecho Penal', 'Derecho Laboral', 'Derecho Familiar', 'Otro']
-                  .map((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
-              onChanged: (value) {
-                setState(() {
-                  categoria = value ?? '';
-                });
-              },
-            ),
-            TextField(
-              controller: descripcionController,
-              decoration: InputDecoration(labelText: 'Descripción del Reclamo'),
-              maxLines: 5,
-            ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: selectDocuments,
-              child: Text('Seleccionar Documentos Adjuntos'),
-            ),
-            SizedBox(height: 8),
-            Text('Documentos seleccionados: ${documentos.join(', ')}'),
-            SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: handleSubmit,
-              child: Text('Enviar Reclamo'),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'mis_solicitudes_screen.dart';
 import 'publicar_oferta_screen.dart';
+import 'package:protosi/screens/login_screen.dart';
+
 
 class AbogadoActionsScreen extends StatefulWidget {
   @override
@@ -26,7 +28,7 @@ class _AbogadoActionsScreenState extends State<AbogadoActionsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Abogado - AsesoriLegal"),
+        title: Text("Abogado - Legaly"),
         backgroundColor: Colors.purple,
       ),
       drawer: Drawer(
@@ -36,7 +38,7 @@ class _AbogadoActionsScreenState extends State<AbogadoActionsScreen> {
             DrawerHeader(
               decoration: BoxDecoration(color: Colors.purple),
               child: Text(
-                'Opciones Abogado',
+                'Menu Abogado',
                 style: TextStyle(color: Colors.white, fontSize: 24),
               ),
             ),
@@ -49,6 +51,16 @@ class _AbogadoActionsScreenState extends State<AbogadoActionsScreen> {
               leading: Icon(Icons.add_box),
               title: Text("Publicar Oferta"),
               onTap: () => _onItemTapped(1),
+            ),
+            ListTile(
+              leading: Icon(Icons.logout_rounded),
+              title: Text("Log Out"),
+              onTap: () => {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                )
+              },
             ),
           ],
         ),

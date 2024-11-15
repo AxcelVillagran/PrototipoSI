@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("AsesoriLegal"),
+        title: Text("Legaly"),
         backgroundColor: Colors.purple,
       ),
       body: Center(
@@ -75,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: 30),
               ElevatedButton(
                 onPressed: _login,
-                child: Text("Iniciar Sesión"),
+                child: Text("Iniciar Sesión", style: TextStyle(color: Colors.white)),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.purple,
                   padding: EdgeInsets.symmetric(vertical: 12),

@@ -20,31 +20,45 @@ class TramitesLegalesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Tramites Legales"),
-        backgroundColor: Colors.grey[900],
-      ),
-      body: ListView(
-        padding: EdgeInsets.all(16),
-        children: tramites.keys.map((area) {
-          return Card(
-            child: ListTile(
-              title: Text(area),
-              trailing: Icon(Icons.arrow_forward),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => TramiteDetailScreen(
-                      title: area,
-                      tramites: tramites[area]!,
-                    ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              "Informacion tramites",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
+          ),
+          Expanded(
+            child: ListView(
+              padding: EdgeInsets.all(16),
+              children: tramites.keys.map((area) {
+                return Card(
+                  child: ListTile(
+                    title: Text(area),
+                    trailing: Icon(Icons.arrow_forward),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => TramiteDetailScreen(
+                            title: area,
+                            tramites: tramites[area]!,
+                          ),
+                        ),
+                      );
+                    },
                   ),
                 );
-              },
+              }).toList(),
             ),
-          );
-        }).toList(),
+          ),
+        ],
       ),
     );
   }

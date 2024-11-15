@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'AsesoriLegal',
+      title: 'Legaly',
       theme: ThemeData(primarySwatch: Colors.purple),
       initialRoute: '/',
       routes: {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:protosi/screens/login_screen.dart';
 import 'buscar_abogados_screen.dart';
 import 'subir_reclamo_screen.dart';
 import 'mis_asesorias_screen.dart';
@@ -31,7 +32,7 @@ class _ClienteActionsScreenState extends State<ClienteActionsScreen> {
     return Scaffold(
       appBar: AppBar(
         //automaticallyImplyLeading: false,
-        title: Text("Cliente - AsesoriLegal", style: TextStyle(color: Colors.white)),
+        title: Text("Cliente - Legaly", style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.purple,
       ),
       drawer: Drawer(
@@ -41,7 +42,7 @@ class _ClienteActionsScreenState extends State<ClienteActionsScreen> {
             DrawerHeader(
               decoration: BoxDecoration(color: Colors.purple),
               child: Text(
-                'Opciones Cliente',
+                'Menu Cliente',
                 style: TextStyle(color: Colors.white, fontSize: 24),
               ),
             ),
@@ -64,6 +65,16 @@ class _ClienteActionsScreenState extends State<ClienteActionsScreen> {
               leading: Icon(Icons.assignment),
               title: Text("Tramites Legales"),
               onTap: () => _onItemTapped(3),
+            ),
+            ListTile(
+              leading: Icon(Icons.logout_rounded),
+              title: Text("Log Out"),
+              onTap: () => {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                )
+              },
             ),
           ],
         ),
