@@ -3,7 +3,7 @@ name: Deploy Flutter Web App to GitHub Pages
 on:
   push:
     branches:
-      - main  # or the branch you want to trigger the deploy on
+      - main  # or any branch that should trigger deployment
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.24.5"
+          flutter-version: "3.24.5"  # Specify the appropriate Flutter version
 
       - name: Install dependencies
         run: flutter pub get
@@ -29,3 +29,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: build/web
+          publish_branch: gh-pages  # Deploy to GitHub Pages directly without needing a separate branch
+
