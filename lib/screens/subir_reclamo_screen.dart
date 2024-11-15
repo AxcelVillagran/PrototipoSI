@@ -29,10 +29,10 @@ class _SubirReclamoScreenState extends State<SubirReclamoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Subir Reclamo"),
-        backgroundColor: Colors.grey[900],
-      ),
+      //appBar: AppBar(
+      //  title: Text("Subir Reclamo"),
+      //  backgroundColor: Colors.grey[900],
+      //),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

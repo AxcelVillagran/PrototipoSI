@@ -37,7 +37,7 @@ class _BuscarAbogadosScreenState extends State<BuscarAbogadosScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Buscar Abogados"),
-        backgroundColor: Colors.grey[900],
+        backgroundColor: Colors.white,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
