@@ -4,6 +4,7 @@ import 'buscar_abogados_screen.dart';
 import 'subir_reclamo_screen.dart';
 import 'mis_asesorias_screen.dart';
 import 'tramites_legales_screen.dart';
+import 'progresos_screen.dart';
 
 class ClienteActionsScreen extends StatefulWidget {
   @override
@@ -18,6 +19,7 @@ class _ClienteActionsScreenState extends State<ClienteActionsScreen> {
     SubirReclamoScreen(),
     MisAsesoriasScreen(),
     TramitesLegalesScreen(),
+    ProgresosScreen()
   ];
 
   void _onItemTapped(int index) {
@@ -65,6 +67,11 @@ class _ClienteActionsScreenState extends State<ClienteActionsScreen> {
               leading: Icon(Icons.assignment),
               title: Text("Tramites Legales"),
               onTap: () => _onItemTapped(3),
+            ),
+            ListTile(
+              leading: Icon(Icons.hourglass_bottom),
+              title: Text("Progreso de tramites"),
+              onTap: () => _onItemTapped(4),
             ),
             ListTile(
               leading: Icon(Icons.logout_rounded),
