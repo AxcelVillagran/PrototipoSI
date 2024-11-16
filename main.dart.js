@@ -8740,7 +8740,7 @@ BE:function BE(){this.d=$
 this.c=this.a=null},
 agP:function agP(){},
 agQ:function agQ(){},
-pD(a,b,c){return new A.uU(a,c,b,new A.Qr(null,null,1/0,56),null)},
+pD(a,b){return new A.uU(b,a,new A.Qr(null,null,1/0,56),null)},
 ayS(a,b){var s=A.N(a).R8.Q
 if(s==null)s=56
 return s+0},
@@ -8750,12 +8750,11 @@ _.e=a
 _.f=b
 _.a=c
 _.b=d},
-uU:function uU(a,b,c,d,e){var _=this
-_.d=a
-_.e=b
-_.ax=c
-_.fx=d
-_.a=e},
+uU:function uU(a,b,c,d){var _=this
+_.e=a
+_.ax=b
+_.fx=c
+_.a=d},
 VL:function VL(a,b){this.a=a
 this.b=b},
 An:function An(){var _=this
@@ -40616,10 +40615,9 @@ if(b==null){s=b7.grZ()
 b=s==null?b3:s.bJ(h)}b2.a.toString
 a=b6.at
 if(a==null){s=b7.geu()
-a=s==null?b3:s.bJ(h)}s=b2.a
-s=s.d
+a=s==null?b3:s.bJ(h)}b2.a.toString
 a0=b3
-if(s)if(q===!0){s=d.a
+if(q===!0){s=d.a
 a0=new A.GM(B.Cz,b3,b3,A.qw(b3,b3,b3,b3,b3,b3,b3,b3,b3,s==null?24:s,b3,b3,b3,b3),b3)}else{if(b9==null)s=b3
 else s=b9.gDE()||b9.l8$>0
 if(s===!0)a0=B.yF}if(a0!=null){if(d.j(0,b7.gog()))a1=b5
@@ -77296,7 +77294,7 @@ ae(){var s=t.N
 return new A.LW(A.b([new A.In(A.b([A.ak(["cliente","Juan P\xe9rez","detalle","Asesor\xeda en Derecho Civil - Fecha: 2023-10-10"],s,s),A.ak(["cliente","Ana Garc\xeda","detalle","Consulta sobre bienes ra\xedces - Fecha: 2023-10-12"],s,s),A.ak(["cliente","Luis Rodr\xedguez","detalle","Asesor\xeda en compra de veh\xedculo - Fecha: 2023-10-15"],s,s)],t.SN),null),new A.Jh(new A.be(null,t.am),null)],t.p))}}
 A.LW.prototype={
 GQ(a){this.ak(new A.acg(this,a))},
-H(a){var s=this,r=null,q=A.pD(!0,B.b3,A.aV("Abogado - Legaly",r,r,r,r,r,r)),p=A.aqD(A.a24(A.b([A.aqE(A.aV("Menu Abogado",r,r,r,A.cd(r,r,B.j,r,r,r,r,r,r,r,r,24,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r),new A.d8(B.b3,r,r,r,r,r,B.aD)),A.ex(r,r,r,!0,A.ew(B.m4,r),r,new A.aci(s),r,A.aV("Mis Solicitudes",r,r,r,r,r,r),r,r),A.ex(r,r,r,!0,A.ew(B.DF,r),r,new A.acj(s),r,A.aV("Publicar Oferta",r,r,r,r,r,r),r,r),A.ex(r,r,r,!0,A.ew(B.m8,r),r,new A.ack(a),r,A.aV("Log Out",r,r,r,r,r,r),r,r)],t.p),B.ax,r,!1))
+H(a){var s=this,r=null,q=A.pD(B.b3,A.aV("Abogado - Legaly",r,r,r,r,r,r)),p=A.aqD(A.a24(A.b([A.aqE(A.aV("Menu Abogado",r,r,r,A.cd(r,r,B.j,r,r,r,r,r,r,r,r,24,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r),new A.d8(B.b3,r,r,r,r,r,B.aD)),A.ex(r,r,r,!0,A.ew(B.m4,r),r,new A.aci(s),r,A.aV("Mis Solicitudes",r,r,r,r,r,r),r,r),A.ex(r,r,r,!0,A.ew(B.DF,r),r,new A.acj(s),r,A.aV("Publicar Oferta",r,r,r,r,r,r),r,r),A.ex(r,r,r,!0,A.ew(B.m8,r),r,new A.ack(a),r,A.aV("Log Out",r,r,r,r,r,r),r,r)],t.p),B.ax,r,!1))
 return A.ho(q,s.e[s.d],p)}}
 A.acg.prototype={
 $0(){var s=this.a
@@ -77326,7 +77324,7 @@ s=this.e
 if(s==="valoracion")B.b.f8(q,new A.adl())
 else if(s==="asesorias")B.b.f8(q,new A.adm())
 return q},
-H(a){var s,r,q,p,o=this,n=null,m=A.pD(!0,B.j,A.aV("Buscar Abogados",n,n,n,n,n,n)),l=o.d
+H(a){var s,r,q,p,o=this,n=null,m=A.pD(B.j,A.aV("Buscar Abogados",n,n,n,n,n,n)),l=o.d
 if(l.length===0)l=n
 s=t.fo
 r=t.N
@@ -77396,7 +77394,7 @@ $0(){},
 $S:0}
 A.pN.prototype={
 H(a){var s=null,r=t.p
-return A.ho(A.pD(!1,B.b3,A.aV("Chat con "+this.c,s,s,s,s,s,s)),A.dQ(A.b([A.ha(A.qL(new A.WJ(this),2,new A.an(8,8,8,8)),1),new A.bw(B.iA,A.yI(A.b([A.ha(A.aaK(!0,B.c_,!1,s,!0,B.Q,s,A.aoN(),s,s,s,s,s,s,2,A.he(s,new A.fL(4,B.cV,B.hR),s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,"Escribe un mensaje...",s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s),B.a4,!0,s,!0,s,!1,s,B.cb,s,s,s,s,s,s,s,1,s,s,!1,"\u2022",s,s,s,s,s,!1,s,!1,s,!0,s,B.fb,s,s,B.bV,B.bE,s,s,s,s,s,s,s,B.aA,s,B.hh,s,s,s,s),1),A.a11(s,A.ew(B.m7,s),s,new A.WK(),s,s)],r),B.ad,B.S,B.ah),s)],r),B.ad,B.S,B.ah),s)}}
+return A.ho(A.pD(B.b3,A.aV("Chat con "+this.c,s,s,s,s,s,s)),A.dQ(A.b([A.ha(A.qL(new A.WJ(this),2,new A.an(8,8,8,8)),1),new A.bw(B.iA,A.yI(A.b([A.ha(A.aaK(!0,B.c_,!1,s,!0,B.Q,s,A.aoN(),s,s,s,s,s,s,2,A.he(s,new A.fL(4,B.cV,B.hR),s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,"Escribe un mensaje...",s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s),B.a4,!0,s,!0,s,!1,s,B.cb,s,s,s,s,s,s,s,1,s,s,!1,"\u2022",s,s,s,s,s,!1,s,!1,s,!0,s,B.fb,s,s,B.bV,B.bE,s,s,s,s,s,s,s,B.aA,s,B.hh,s,s,s,s),1),A.a11(s,A.ew(B.m7,s),s,new A.WK(),s,s)],r),B.ad,B.S,B.ah),s)],r),B.ad,B.S,B.ah),s)}}
 A.WJ.prototype={
 $2(a,b){var s,r=null,q=this.a.d[b],p=q.h(0,"sender")
 p.toString
@@ -77410,7 +77408,7 @@ $0(){},
 $S:0}
 A.pO.prototype={
 H(a){var s=null,r=t.p
-return A.ho(A.pD(!0,B.b3,A.aV(this.c,s,s,s,A.cd(s,s,B.j,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s)),A.dQ(A.b([A.ha(A.qL(new A.WL(this),4,s),1),new A.bw(B.iA,A.yI(A.b([A.ha(A.aaK(!0,B.c_,!1,s,!0,B.Q,s,A.aoN(),s,s,s,s,s,s,2,A.he(s,new A.fL(4,B.cV,B.hR),s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,"Escribe un mensaje...",s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s),B.a4,!0,s,!0,s,!1,s,B.cb,s,s,s,s,s,s,s,1,s,s,!1,"\u2022",s,s,s,s,s,!1,s,!1,s,!0,s,B.fb,s,s,B.bV,B.bE,s,s,s,s,s,s,s,B.aA,s,B.hh,s,s,s,s),1),A.a11(s,A.ew(B.m7,s),s,new A.WM(),s,s)],r),B.ad,B.S,B.ah),s)],r),B.ad,B.S,B.ah),s)}}
+return A.ho(A.pD(B.b3,A.aV(this.c,s,s,s,A.cd(s,s,B.j,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s)),A.dQ(A.b([A.ha(A.qL(new A.WL(this),4,s),1),new A.bw(B.iA,A.yI(A.b([A.ha(A.aaK(!0,B.c_,!1,s,!0,B.Q,s,A.aoN(),s,s,s,s,s,s,2,A.he(s,new A.fL(4,B.cV,B.hR),s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,"Escribe un mensaje...",s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s),B.a4,!0,s,!0,s,!1,s,B.cb,s,s,s,s,s,s,s,1,s,s,!1,"\u2022",s,s,s,s,s,!1,s,!1,s,!0,s,B.fb,s,s,B.bV,B.bE,s,s,s,s,s,s,s,B.aA,s,B.hh,s,s,s,s),1),A.a11(s,A.ew(B.m7,s),s,new A.WM(),s,s)],r),B.ad,B.S,B.ah),s)],r),B.ad,B.S,B.ah),s)}}
 A.WL.prototype={
 $2(a,b){var s,r=null,q=this.a.d[b],p=q.h(0,"sender")
 p.toString
@@ -77427,7 +77425,7 @@ ae(){var s=null,r="Asesoria en Derecho Civil",q="Comprobante de pago",p=$.am(),o
 return new A.MK(A.b([new A.va(s),new A.L1(new A.ic(B.ca,p),new A.ic(B.ca,p),s),new A.Im(A.b([A.ak(["titulo",r,"fecha","2023-10-10"],o,o),A.ak(["titulo","Consulta sobre Bienes Ra\xedces","fecha","2023-10-15"],o,o),A.ak(["titulo","Asesoria en Compra de Veh\xedculo","fecha","2023-11-01"],o,o)],t.SN),s),new A.Lt(A.ak(["Derecho Civil",A.b([A.ak(["title","Tr\xe1mite de Contrato","documents",A.b(["ID","Contrato firmado","Prueba de domicilio"],n)],o,m),A.ak(["title","Certificaci\xf3n de Acta","documents",A.b(["ID","Acta de nacimiento",q],n)],o,m)],l),"Bienes Ra\xedces",A.b([A.ak(["title","Registro de Propiedad","documents",A.b(["ID","T\xedtulo de propiedad","Prueba de pago"],n)],o,m),A.ak(["title","Cambio de Propietario","documents",A.b(["ID","T\xedtulo anterior","Comprobante de venta"],n)],o,m)],l),"Tecnolog\xeda",A.b([A.ak(["title","Registro de Patente","documents",A.b(["ID","Formulario de solicitud","Descripci\xf3n t\xe9cnica"],n)],o,m),A.ak(["title","Certificaci\xf3n de Marca","documents",A.b(["ID","Dise\xf1o de marca",q],n)],o,m)],l)],o,t.b5),s),new A.Jf(A.b([A.ak(["titulo",r,"progreso",0.7],o,m),A.ak(["titulo","Consulta sobre bienes ra\xedces","progreso",0.5],o,m),A.ak(["titulo","Asesoria en compra de veh\xedculo","progreso",0.9],o,m)],l),s)],t.p))}}
 A.MK.prototype={
 pM(a){this.ak(new A.adY(this,a))},
-H(a){var s=this,r=null,q=A.pD(!0,B.b3,A.aV("Cliente - Legaly",r,r,r,A.cd(r,r,B.j,r,r,r,r,r,r,r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r)),p=A.aqD(A.a24(A.b([A.aqE(A.aV("Menu Cliente",r,r,r,A.cd(r,r,B.j,r,r,r,r,r,r,r,r,24,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r),new A.d8(B.b3,r,r,r,r,r,B.aD)),A.ex(r,r,r,!0,A.ew(B.DM,r),r,new A.ae_(s),r,A.aV("Buscar Abogados",r,r,r,r,r,r),r,r),A.ex(r,r,r,!0,A.ew(B.DN,r),r,new A.ae0(s),r,A.aV("Subir Reclamo",r,r,r,r,r,r),r,r),A.ex(r,r,r,!0,A.ew(B.m5,r),r,new A.ae1(s),r,A.aV("Mis Asesorias",r,r,r,r,r,r),r,r),A.ex(r,r,r,!0,A.ew(B.m4,r),r,new A.ae2(s),r,A.aV("Tramites Legales",r,r,r,r,r,r),r,r),A.ex(r,r,r,!0,A.ew(B.DK,r),r,new A.ae3(s),r,A.aV("Progreso de tramites",r,r,r,r,r,r),r,r),A.ex(r,r,r,!0,A.ew(B.m8,r),r,new A.ae4(a),r,A.aV("Log Out",r,r,r,r,r,r),r,r)],t.p),B.ax,r,!1))
+H(a){var s=this,r=null,q=A.pD(B.b3,A.aV("Cliente - Legaly",r,r,r,A.cd(r,r,B.j,r,r,r,r,r,r,r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r)),p=A.aqD(A.a24(A.b([A.aqE(A.aV("Menu Cliente",r,r,r,A.cd(r,r,B.j,r,r,r,r,r,r,r,r,24,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r),new A.d8(B.b3,r,r,r,r,r,B.aD)),A.ex(r,r,r,!0,A.ew(B.DM,r),r,new A.ae_(s),r,A.aV("Buscar Abogados",r,r,r,r,r,r),r,r),A.ex(r,r,r,!0,A.ew(B.DN,r),r,new A.ae0(s),r,A.aV("Subir Reclamo",r,r,r,r,r,r),r,r),A.ex(r,r,r,!0,A.ew(B.m5,r),r,new A.ae1(s),r,A.aV("Mis Asesorias",r,r,r,r,r,r),r,r),A.ex(r,r,r,!0,A.ew(B.m4,r),r,new A.ae2(s),r,A.aV("Tramites Legales",r,r,r,r,r,r),r,r),A.ex(r,r,r,!0,A.ew(B.DK,r),r,new A.ae3(s),r,A.aV("Progreso de tramites",r,r,r,r,r,r),r,r),A.ex(r,r,r,!0,A.ew(B.m8,r),r,new A.ae4(a),r,A.aV("Log Out",r,r,r,r,r,r),r,r)],t.p),B.ax,r,!1))
 return A.ho(q,s.e[s.d],p)}}
 A.adY.prototype={
 $0(){var s=this.a
@@ -77467,7 +77465,7 @@ s.toString
 A.a5J(s,A.nY(new A.agK(),null,t.z))}else if(s==="Abogado"){s=this.c
 s.toString
 A.a5J(s,A.nY(new A.agL(),null,t.z))}},
-H(a){var s=this,r=null,q="Iniciar Sesi\xf3n",p=A.pD(!0,B.b3,A.aV("Legaly",r,r,r,r,r,r)),o=A.aV(q,r,r,r,A.cd(r,r,r,r,r,r,r,r,r,r,r,24,r,r,B.aQ,r,r,!0,r,r,r,r,r,r,r,r),B.ey,r),n=A.cU(r,20,r),m=s.f,l=t.fo
+H(a){var s=this,r=null,q="Iniciar Sesi\xf3n",p=A.pD(B.b3,A.aV("Legaly",r,r,r,r,r,r)),o=A.aV(q,r,r,r,A.cd(r,r,r,r,r,r,r,r,r,r,r,24,r,r,B.aQ,r,r,!0,r,r,r,r,r,r,r,r),B.ey,r),n=A.cU(r,20,r),m=s.f,l=t.fo
 l=A.a8(new A.ao(A.b(["Cliente","Abogado"],t.s),new A.agN(),l),!0,l.i("aQ.E"))
 return A.ho(p,A.vf(new A.bw(B.co,A.dQ(A.b([o,n,A.aqH(A.he(r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Seleccione Rol",r,r,r,r,r,r,r,r,r,r,r,r,r),l,new A.agO(s),m,t.N),A.cU(r,20,r),A.rU(s.d,A.he(r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Usuario",r,r,r,r,r,r,r,r,r,r,r,r,r),r,1,!1,r,r),A.cU(r,20,r),A.rU(s.e,A.he(r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,"Contrase\xf1a",r,r,r,r,r,r,r,r,r,r,r,r,r),r,1,!0,r,r),A.cU(r,30,r),A.w7(A.aV(q,r,r,r,A.cd(r,r,B.j,r,r,r,r,r,r,r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r),s.ga4b(),A.Zx(r,r,B.b3,r,r,r,r,r,r,r,r,r,new A.an(0,12,0,12),r,r,r,r,r,r))],t.p),B.cl,B.j6,B.ah),r),r,r),r)}}
 A.agK.prototype={
@@ -77600,7 +77598,7 @@ $0(){this.a.a7Q(this.b)},
 $S:0}
 A.t_.prototype={
 H(a){var s=null
-return A.ho(A.pD(!0,B.b3,A.aV(this.c,s,s,s,A.cd(s,s,B.j,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s)),A.qL(new A.abB(this),2,new A.an(16,16,16,16)),s)}}
+return A.ho(A.pD(B.b3,A.aV(this.c,s,s,s,A.cd(s,s,B.j,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s)),A.qL(new A.abB(this),2,new A.an(16,16,16,16)),s)}}
 A.abB.prototype={
 $2(a,b){var s=null,r=this.a.d[b],q=A.aV(r.h(0,"title"),s,s,s,s,s,s),p=r.h(0,"documents"),o=A.a0(p).i("ao<1,h>")
 return A.FD(new A.wi(q,A.a8(new A.ao(p,new A.abA(),o),!0,o.i("aQ.E")),s))},
