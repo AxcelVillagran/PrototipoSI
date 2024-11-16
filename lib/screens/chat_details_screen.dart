@@ -16,7 +16,7 @@ class ChatDetailsScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Chat con $clienteName"),
         backgroundColor: Colors.purple,
-        automaticallyImplyLeading: false,
+        //utomaticallyImplyLeading: false,
       ),
       body: Column(
         children: [
