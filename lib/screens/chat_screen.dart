@@ -17,8 +17,8 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(asesoriaTitle),
-        backgroundColor: Colors.grey[900],
+        title: Text(asesoriaTitle,style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.purple,
       ),
       body: Column(
         children: [

@@ -10,8 +10,8 @@ class TramiteDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
-        backgroundColor: Colors.grey[900],
+        title: Text(title,style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.purple,
       ),
       body: ListView.builder(
         padding: EdgeInsets.all(16),

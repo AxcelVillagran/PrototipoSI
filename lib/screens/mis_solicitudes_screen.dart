@@ -55,7 +55,7 @@ class MisSolicitudesScreen extends StatelessWidget {
                                 ),
                               );
                             },
-                            child: Text("Ver Detalles"),
+                            child: Text("Ver Detalles",style: TextStyle(color: Colors.white),),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.purple,
                             ),
